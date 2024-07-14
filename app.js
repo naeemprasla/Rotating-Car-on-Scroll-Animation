@@ -1,4 +1,3 @@
-AOS.init();
 
 //Car Rotator on Scroll	
 var $container = $(document);
@@ -12,7 +11,7 @@ $container.scroll(function(event) {
 
 // preload the given total amount of iamges
 function create(totalImages) {
-	for (var i = 0; i < totalImages; i++) {
+	for (var i = 1; i < totalImages; i++) {
         var img = $('<img/>')
         img[0].src = getImgUrl(i);
         $bgImage.append(img)
@@ -26,7 +25,7 @@ function setBgImage(position){
 	var imageNum;
 	var lineCount = 0;
 	
-    imageNum = parseInt(position  / 100 * 6);
+    imageNum = parseInt(position  / 100 * 5);
 
 	//console.log("IMG: " + imageNum + ", Position: " + position);
 	
@@ -36,9 +35,9 @@ function setBgImage(position){
 
 function getImgUrl(num){
 	if(num > 9){
-		return "/images/image (" + num + ").jpg"; 
+		return "https://res.cloudinary.com/dewn0wy2s/image/upload/v1592668487/360/"+num+".png"; 
 	}else{
-		return "/images/image (" + num + ").jpg"; 
+		return "https://res.cloudinary.com/dewn0wy2s/image/upload/v1592668487/360/"+num+".png"; 
 	}
      
 }
